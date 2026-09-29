@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_partner_verify_sale" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.partner.verify.sale</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='sale_management']" position="inside">
+                <block title="Partner Verify" name="partner_verify_sale_setting_container">
+                    <setting
+                        id="partner_verify_sale_enabled"
+                        string="Require Verified Customer"
+                        help="Prevent sales orders from being confirmed when the customer is not verified.">
+                        <field name="partner_verify_sale_enabled"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

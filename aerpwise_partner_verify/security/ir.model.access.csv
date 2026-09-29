@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_verify_reject_wizard_manager,access.partner.verify.reject.wizard.manager,model_partner_verify_reject_wizard,aerpwise_partner_verify.group_partner_verify_manager,1,1,1,1

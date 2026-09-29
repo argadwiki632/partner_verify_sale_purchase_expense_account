@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_partner_verify_account" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.partner.verify.account</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='account']" position="inside">
+                <block title="Partner Verify" name="partner_verify_account_setting_container">
+                    <setting
+                        id="partner_verify_account_enabled"
+                        string="Require Verified Partner"
+                        help="Prevent customer invoices and vendor bills from being posted when the partner is not verified.">
+                        <field name="partner_verify_account_enabled"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_partner_verify_expense" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.partner.verify.expense</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_expense.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='hr_expense']" position="inside">
+                <block title="Partner Verify" name="partner_verify_expense_setting_container">
+                    <setting
+                        id="partner_verify_expense_enabled"
+                        string="Require Verified Partners"
+                        help="Prevent expense reports from being submitted or approved when the employee work contact or vendor is not verified.">
+                        <field name="partner_verify_expense_enabled"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

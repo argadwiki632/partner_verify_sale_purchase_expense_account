@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_partner_verify_purchase" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.partner.verify.purchase</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='purchase']" position="inside">
+                <block title="Partner Verify" name="partner_verify_purchase_setting_container">
+                    <setting
+                        id="partner_verify_purchase_enabled"
+                        string="Require Verified Vendor"
+                        help="Prevent purchase orders from being confirmed when the vendor is not verified.">
+                        <field name="partner_verify_purchase_enabled"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
